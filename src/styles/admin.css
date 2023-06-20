@@ -100,7 +100,7 @@ form{
     width:900px;
     margin: 40px 230px;
 }
-.table1 {
+table {
     width: 100%;
     border: 1px solid black;
     border-collapse: collapse;
@@ -112,7 +112,7 @@ table,td,th{
     
 }
 td,th{
-    padding:3px 3px;
+    padding:10px 10px;
     text-align: center;
     align-items: center;
 }
@@ -125,7 +125,7 @@ tr:nth-child(2n){
 table img{
     width:50%;
 }
-.table1 th{
+table th{
     background-color: gray;
     color: white;
 }
@@ -137,18 +137,34 @@ table img{
     }
     .tb{
         width:500px;
-        margin: 20px 10px;
+        margin: 20px 0px;
     }
     .table1 {
         width: 70%;
-       
+       /* table-layout: fixed; */
     }
-    th,td{
-        padding:3px 0px;
+    .table2 {
+        margin: 0px !important;
+        padding: 0px !important;
+        width: 80%;
+       table-layout: fixed;
+    }
+    .table2 td{
+        padding: 0px;
+        width: 100% !important;
+        word-wrap:break-word ;
     }
     
-    .admin form{
-        width: 200px !important;
+    .table1 td{
+       padding: 3px;
+       
+        width:70%;
+      
+    }
+   
+    
+    .ad form{
+        width: 300px !important;
         margin: 30px 25px;
         padding: 5px;
     }
@@ -165,4 +181,5 @@ table img{
         height:250px;
        
     }
+    
 }

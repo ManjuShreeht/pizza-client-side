@@ -87,7 +87,9 @@ a:hover{
         padding: 1px 0 0 1px;
 
     }
-   
+    .darknav a{
+        color: black;
+    }
     .icon{
         display: block;
     }

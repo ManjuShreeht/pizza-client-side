@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { deleteUser, getAllUser } from '../../actions/UserActions'
 import Loading from '../../components/Loading'
 import '../../styles/admin.css'
+import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 
 const AllUser = () => {
   const user=useSelector(state=>state.getUserReducer)
@@ -21,7 +22,7 @@ console.log(AllUser)
       <div className='tb'>
         {loading && <Loading />}
         {!loading && !error &&
-        <table className={`table table-striped border hover ${theme=="light"? "table-dark":"table-light" } `}  >
+        <table className={`table2 table-striped border hover ${theme=="light"? "table-dark":"table-light" } `}  >
         <thead>
         <tr>
                 <th scope="col">S/n</th>
@@ -45,9 +46,9 @@ console.log(AllUser)
                     </td>
                     <td>{user.mobile}</td>
                     <td>{(user.createdAt).substring(0,10)}</td>
-                    <td><button className="but" onClick={()=>{
+                    <td><AiFillDelete style={{cursor:"pointer",color:"red"}} onClick={()=>{
                       dispatch(deleteUser(user._id))
-                    }}>Delete</button></td>
+                    }}>Delete</AiFillDelete></td>
                     
                   </tr>
 })}

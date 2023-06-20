@@ -18,16 +18,16 @@ const AllOrders = () => {
     <div className='tb'>
       {loading && <Loading />}
       {!loading && !error &&
-        <table className={`table table-striped border hover ${theme=="light"?"table-dark":"table-light"}`}>
+        <table className={`table2 table-striped border hover ${theme=="light"?"table-dark":"table-light"}`}>
             <thead>
               <tr>
-                <th scope="col">S/n</th>
+                {/* <th scope="col">S/n</th> */}
                 <th scope="col">User Id</th>
                 <th scope="col">Email</th>
                 
                 <th scope="col">Amount</th>
                 <th scope="col">Date</th>
-                <th scope="col">Transaction ID</th>
+                <th scope="col">Trans ID</th>
                 <th scope="col">Status</th>
                 
 
@@ -37,12 +37,12 @@ const AllOrders = () => {
               {AllOrders &&
                 AllOrders.map((order,i) => (
                   <tr key={order._id}>
-                    <td>{i+1}</td>
+                    {/* <td>{i+1}</td> */}
                     <td>{order. userid}</td>
                     <td>{order.email}</td>
                      <td>Rs {order.orderAmount}</td>
                     <td>{(order.createdAt).substring(0,10)}</td>
-                    <td>{order.transectionId}</td>
+                    <td style={{minWidth:"30px"}}>{order.transectionId}</td>
                     <td>{order.isDeliverd?(<h6 className='text-success'>Deliverd</h6>):(
                         <>
                         <button className='but'
