@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import About from './../pages/About';
 import '../styles/navbar.css'
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineShoppingCart,AiFillCloseCircle } from "react-icons/ai";
+import {BiMenu} from 'react-icons/bi'
 import { DarkAct } from '../actions/DarkAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../actions/UserActions';
 import { getCart } from '../actions/cartAction';
 const Navbar = () => {
+
+ const [clicked,setClicked]=useState(false)
 
 
   const { theme } = useSelector((state) => state.DarkReducer);
@@ -30,12 +33,21 @@ const dispatch=useDispatch()
     dispatch(getCart(currentUser));
     }
   },[cart])
-    const user=false
+    
+const dis=()=>{
+  setClicked(!clicked)
+}
+
+
   return (
-    <div className={`${theme==="light"?"nav":"darknav"}`}>
+    <div className={` nav ${theme==="light"?"light-nav":"darknav"}`}>
+    <div className="nav1" >
+      {clicked ? <AiFillCloseCircle className='icon' onClick={dis} />: 
+      <BiMenu className="icon" onClick={dis}/>}
+      
             <img src='https://png.pngtree.com/png-vector/20220929/ourmid/pngtree-word-pizza-made-from-pizza-slices-png-image_6222066.png' alt="logo" className='logo' />
-        <div className='innav'>
-            <Link to='/'>Home</Link>
+        <div className={`innav ${clicked?"active":" "} `} id='none'>
+            <Link to='/' >Home</Link>
             <Link to='/contact'>Contact Us</Link>
             <Link to='/about'>About Us</Link>
             <Link to='/policy'>Terms And Polices</Link>
@@ -65,6 +77,7 @@ const dispatch=useDispatch()
 
         </div>
         
+    </div>
     </div>
   )
 }

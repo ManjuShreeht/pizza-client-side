@@ -1,16 +1,27 @@
 .nav{
     width:100%;
+    min-width: max-content;
    
     height:50px;
     position: sticky;
    top:0;
-   right:0;
-background-color: white;
-        display: flex;
+  
+  
+     
+    
+}
+.light-nav{
+    background-color: white;
+    color: #000;
+    box-shadow: 1px 2px 2px #000;
+}
+.nav1 {
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 1px 2px 2px #000;
-    
+  
+   
 }
 .innav{
     display: flex;
@@ -20,7 +31,7 @@ background-color: white;
 .logo{
     width:100px;
     height:50px;
-    background-color: red;
+    
 }
 .const {
     position: relative;
@@ -37,27 +48,56 @@ span{
 }
 
 .darknav{
-    width:100%;
-    max-width:max-content;
-    height: 50px;
-    position: sticky;
-top:0;
+   
 background-color: black;
      color:white;
-        display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 1px 2px 2px #fff;
+     box-shadow: 1px 2px 2px #fff;
+      
     
 }
 .darknav a{
     color: white;
 }
+a:hover{
+    color:#17cf97;
+}
+.active{
+    color: #17cf97;
+}
+
+.icon{
+    display: none;
+    width:50px;
+   
+}
 
 
 @media only screen and (max-width:889px){
-    .nav{
-        width:auto;
+    #none{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top:70px;
+        left:-300px;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        box-shadow: 1px 2px 2px #000;
+        padding: 1px 0 0 1px;
+
     }
+   
+    .icon{
+        display: block;
+    }
+   a{
+    margin-bottom: 5px;
+   }
+   #none.active{
+    left:0px;
+
+   }
 
 }
