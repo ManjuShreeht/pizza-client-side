@@ -1,0 +1,11 @@
+
+.flex-container{
+    display: flex !important;
+    }
+  
+    .btn3{
+        background-color: red;
+        padding: 5px 10px;
+        color: white;
+        border-radius: 5px;
+    }

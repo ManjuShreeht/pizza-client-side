@@ -1,0 +1,110 @@
+.light{
+    width:100%;
+    height: max-content;
+    padding-bottom: 20px;
+   
+}
+
+.pizza{
+    display: flex;
+    
+   flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap:20px;
+    
+    
+    
+}
+.p{
+    width:320px;
+    height:380px;
+    
+    border-radius: 5px;
+}
+.p-light{
+    background-color: #363434;
+    color: white;
+    box-shadow: 1px 1px 2px #fff;
+}
+.p-dark{
+    background-color: #fff;
+    color: black;
+    box-shadow: 1px 1px 2px #fff;
+}
+.p img{
+    width:80%;
+    height:200px;
+    border-radius: 5px;
+}
+.p h5{
+    font-size: 24px;
+    text-align: center;
+}
+.pizza-flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap:20px;
+    padding-left: 20px;
+    
+}
+.pizza-flex div{
+    width: 180px;
+    padding-bottom: 20px;
+
+}
+.pizza-flex select{
+    width: 100px;
+}
+.pizza-flex button{
+    width:120px;
+   
+    background-color: rgb(253, 208, 23);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding:5px 5px;
+    cursor: pointer;
+}
+.pizza-flex button:hover{
+    color: #000;
+}
+
+.filter{
+    display: flex;
+    padding: 50px 100px ;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.filter input{
+    width:350px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+.filter select{
+    width:150px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center; 
+    border: 1px solid black;
+}
+.filter button{
+    width:100px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    text-align: center; 
+    background-color: rgb(153, 149, 149);
+    color: aliceblue;
+ 
+   
+}
+
+.dark{
+    background-color:black;
+    padding-bottom: 20px;
+}
