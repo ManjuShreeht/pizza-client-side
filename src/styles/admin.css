@@ -1,6 +1,6 @@
 .ad{
    width: 100%;
-   
+   min-width: max-content;
     max-height: max-content;
     padding-bottom: 100px;
     min-height: 100vh;
