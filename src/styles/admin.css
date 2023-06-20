@@ -97,11 +97,13 @@ form{
 }
 
 .tb{
-    width:900px;
-    margin: 40px 230px;
+    width:100%;
+    margin-top:40px;
+    padding-left: 210px;
+    
 }
 table {
-    width: 100%;
+    width: 70%;
     border: 1px solid black;
     border-collapse: collapse;
    border-radius: 15px;
@@ -137,11 +139,13 @@ table th{
     }
     .tb{
         width:500px;
-        margin: 20px 0px;
+        padding-top: 30px !important;
+        padding-left: 10px !important;
     }
     .table1 {
-        width: 70%;
-       /* table-layout: fixed; */
+        width: 300px !important;
+       
+       padding: 0px !important;
     }
     .table2 {
         margin: 0px !important;
@@ -156,9 +160,9 @@ table th{
     }
     
     .table1 td{
-       padding: 3px;
+       padding: 0px !important;
        
-        width:70%;
+        width: 500px;
       
     }
    
