@@ -1,12 +1,11 @@
 .nav{
-    width:100%;
+    width:auto;
     min-width: max-content;
    
     height:50px;
     position: sticky;
    top:0;
-  
-  
+ 
      
     
 }

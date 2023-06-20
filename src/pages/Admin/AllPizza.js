@@ -30,7 +30,7 @@ const AllPizza = () => {
       <div className='tb'>
         {loading && <Loading />}
         {!loading && !error &&
-        <table className={`table table-striped border hover ${theme=="light"? "table-dark":"table-light" } `}  >
+        <table className={`table1 table-striped border hover ${theme=="light"? "table-dark":"table-light" } `}  >
         <thead>
           <tr style={{color:theme=="light"?"black":"white" }}> 
             <th  scope="col">S/n</th>
@@ -64,10 +64,10 @@ const AllPizza = () => {
                   <Link to={`/admin/${pizza?._id}`}>
                     <AiFillEdit onClick={()=>{
                       dispatch(getPizzaId(pizza._id));
-                    }} style={{color:theme=="light"?"white":"black" }} />
+                    }} style={{color:"blue" }} />
                   </Link>{" "}
                   &nbsp;
-                  <AiFillDelete onClick={() => deletepizza(pizza._id)} style={{cursor:"pointer"}} />
+                  <AiFillDelete onClick={() => deletepizza(pizza._id)} style={{cursor:"pointer",color:"red"}} />
                 </td>
               </tr>
             ))}

@@ -96,18 +96,55 @@ form{
     box-shadow: 1px 1px 2px #000;
 }
 
+.tb{
+    width:900px;
+    margin: 40px 230px;
+}
+.table1 {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+   border-radius: 15px;
+}
+table,td,th{
+    border: 1px solid rgb(141, 140, 140); 
+    color: #000;
+    
+}
+td,th{
+    padding:3px 3px;
+    text-align: center;
+    align-items: center;
+}
+tr:nth-child(2n+1){
+    background-color: rgb(100, 98, 98);
+}
+tr:nth-child(2n){
+    background-color: rgb(250, 245, 245);
+}
+table img{
+    width:50%;
+}
+.table1 th{
+    background-color: gray;
+    color: white;
+}
+
 @media only screen and (max-width:889px){
     .admin{
         flex-wrap: wrap;
         
     }
     .tb{
-        width: 700px;
-       
+        width:500px;
+        margin: 20px 10px;
+    }
+    .table1 {
+        width: 70%;
        
     }
-    table{
-        width: 500px !important;
+    th,td{
+        padding:3px 0px;
     }
     
     .admin form{
@@ -121,5 +158,11 @@ form{
     img{
         width:30px;
         height: 30px;
+    }
+    .a-name{
+   
+        width: 300px;
+        height:250px;
+       
     }
 }
