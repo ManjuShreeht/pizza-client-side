@@ -15,7 +15,7 @@ const AllOrders = () => {
   return (
     <div className={`ad  ${theme=="light"?"l-admin":"d-admin"}`}>
     <h2 style={{textAlign:"center" ,paddingTop:"20px"}}>Orders List</h2>
-    <div className='tb' style={{paddingLeft:"50px"}}>
+    <div className='tb' style={{paddingLeft:"150px"}}>
       {loading && <Loading />}
       {!loading && !error &&
         <table className={`table2 table-striped border hover ${theme=="light"?"table-dark":"table-light"}`}>

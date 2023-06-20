@@ -10,7 +10,7 @@ const Filter = () => {
     const dispatch= useDispatch()
     const { theme } = useSelector((state) => state.DarkReducer);
   return (
-    <div>
+    <div className='fil'>
         <form className="filter">
             <input type="text" className={` ${theme==="light"?"p-light":"p-dark"}`} placeholder='search here by pizza name' name="name" value={searchkey} onChange={(e)=>setKey(e.target.value)} />
 

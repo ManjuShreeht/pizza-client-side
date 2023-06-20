@@ -25,7 +25,7 @@ const AllPizza = () => {
     dispatch(deletePizza(id));
   };
   return (
-    <div className={`ad  ${theme=="light"?"l-admin":"d-admin"}`}>
+    <div className={`ad t ${theme=="light"?"l-admin":"d-admin"}`}>
       <h2 style={{textAlign:"center"}}>Pizza List</h2>
       <div className='tb'>
         {loading && <Loading />}
@@ -33,10 +33,10 @@ const AllPizza = () => {
         <table className={`table1 table-striped border hover ${theme=="light"? "table-dark":"table-light" } `}  >
         <thead>
           <tr style={{color:theme=="light"?"black":"white" }}> 
-            <th  scope="col">S/n</th>
+            <th  scope="col" >S/n</th>
             <th scope="col">Pizza Name</th>
             <th scope="col">Prices</th>
-            <th scope="col">Category</th>
+            <th scope="col" >Category</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -59,7 +59,7 @@ const AllPizza = () => {
                   Medium:{pizza.prices[0]["medium"]} <br />
                   Large:{pizza.prices[0]["large"]} <br />
                 </td>
-                <td>{pizza.category}</td>
+                <td >{pizza.category}</td>
                 <td >
                   <Link to={`/admin/${pizza?._id}`}>
                     <AiFillEdit onClick={()=>{

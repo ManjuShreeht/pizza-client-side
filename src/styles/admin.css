@@ -76,7 +76,7 @@
     border-radius: 5px;
 }
 
-form{
+.ad form{
     width:500px;
     border: 1px solid black;
     box-shadow: 1px 1px 2px #000;
@@ -133,6 +133,8 @@ table th{
     color: white;
 }
 
+
+
 @media only screen and (max-width:889px){
     .admin{
        /* display:block;
@@ -151,11 +153,11 @@ table th{
     .tb{
         width:500px;
         padding-top: 30px !important;
-        padding-left: 10px !important;
+        padding-left: 0px !important;
     }
     .table1 {
-        width: 300px !important;
-       
+        width: 350px !important;
+      table-layout: fixed;
        padding: 0px !important;
     }
     .table2 {
@@ -173,7 +175,7 @@ table th{
     .table1 td{
        padding: 0px !important;
        
-        width: 500px;
+        width: 400px !important;
       
     }
    
