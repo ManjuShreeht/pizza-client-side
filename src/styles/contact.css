@@ -1,4 +1,5 @@
 .contact{
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +20,7 @@
     padding: 30px ;
     display: flex;
     justify-content:space-evenly;
-    flex-wrap: wrap;
+    
 
     
     gap:40px;
@@ -34,4 +35,14 @@
     flex:1;
     font-size: 24px;
     word-wrap: break-word;
+}
+@media only screen and (max-width:889px){
+    .flex{
+        display:block;
+        margin: 10px 200px;
+    }
+    .contactimg {
+        width: 300px;
+        height: 300px;
+    }
 }
