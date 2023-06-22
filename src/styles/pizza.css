@@ -6,24 +6,35 @@
   
    
 }
+.bb-dark{
+    background-color:white !important;
+    color: black !important;
+}
+.bb-white{
+    background-color: #000;
+    color: white;
+}
 
 .pizza{
     display: flex;
-    
+    height: max-content;
    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: start;
     gap:50px;
-    
+   
     
     
 }
 .p{
     width:320px;
-    height:380px;
-    
+    height:max-content;
+    word-wrap: break-word;
     border-radius: 5px;
+   
+    
+    min-height:380px;
 }
 .p-light{
     background-color: #363434;

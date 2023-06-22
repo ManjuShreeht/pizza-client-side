@@ -48,7 +48,7 @@ const dis=()=>{
             <div className='aaa'>
 
            
-            <img src='https://png.pngtree.com/png-vector/20220929/ourmid/pngtree-word-pizza-made-from-pizza-slices-png-image_6222066.png' alt="logo" className='logo' />
+            <img src='https://cdn.pixabay.com/photo/2020/03/08/16/04/pizza-4912871_1280.png' alt="logo" className={` logo ${theme=="light"?"l-img":"d-img"}`} />
             </div>
         </div>
         <ul className={`innav none ${clicked?"active":"none"} `} >

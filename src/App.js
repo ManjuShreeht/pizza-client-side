@@ -18,6 +18,8 @@ import AllPizza from "./pages/Admin/AllPizza";
 import EditPizza from "./pages/Admin/EditPizza";
 import AllUser from "./pages/Admin/AllUser";
 import AllOrders from "./pages/Admin/AllOrders";
+import Demo from "./components/Demo";
+import Carousel from "./components/Carousel";
 
 function App() {
   const userdata = useSelector((state) => state.userLoginReducer);
@@ -29,7 +31,8 @@ function App() {
       <BrowserRouter>
       <Navbar />
         <Routes>
-          <Route path="/" element={[currentUser && currentUser.isAdmin?<Navigate to='/admin' />:<Pizza />]} />
+          
+          <Route path="/" element={[currentUser && currentUser.isAdmin?<Navigate to='/admin' />:[<Carousel />,<Pizza />]]} />
 
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />

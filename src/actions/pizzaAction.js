@@ -21,7 +21,7 @@ export const FilterPizza = (searchkey,category) => async (dispatch) => {
   try {
     const res = await axios.get("https://pizzaapp-e8ek.onrender.com/api/pizza/getall");
     // console.log(filterdata)
-   filterdata=res.data.filter(pizza=>pizza.name.toLowerCase().includes(searchkey))
+   filterdata=res.data.filter(pizza=>pizza.name.toLowerCase().includes(searchkey.toLowerCase()))
    if(category !=='all'){
     filterdata=res.data.filter(pizza=>pizza.category.toLowerCase()===category)
    }
