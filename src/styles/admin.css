@@ -215,5 +215,11 @@ table th{
     .sn{
         width: 40px;
     }
+    .but{
+        padding: 0px;
+       
+      width:50px !important;
+      
+    }
     
 }

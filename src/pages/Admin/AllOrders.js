@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { DeliverOrder, getAllOrder } from '../../actions/placeorderAction'
 import Loading from '../../components/Loading'
+import '../../styles/admin.css'
 
 const AllOrders = () => {
   const AllOrder=useSelector(state=>state.getAllOrdersReducer)
