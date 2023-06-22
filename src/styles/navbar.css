@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-     
+     font-size: 16px;
    
 }
 .innav{
@@ -26,11 +26,12 @@
     align-items: center;
    justify-content: center;
     gap:20px;
+    font-size: 16px;
    
 }
 .innav1{
     display: flex;
-    
+    font-size: 16px;
  justify-content: center;
     gap:4px;
    
@@ -39,9 +40,12 @@
 ul li{
     list-style: none;
 }
+ul li a{
+    font-size: 16px;
+}
 .logo{
-    width:80px;
-    height:45px;
+    width:60px;
+    height:40px;
     
 }
 .l-img{
@@ -62,6 +66,7 @@ span{
 .btn{
     border: none;
     font-size: 16px;
+    font-weight:normal;
 }
 
 .darknav {

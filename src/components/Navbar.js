@@ -62,7 +62,7 @@ const dis=()=>{
             <li >{currentUser.username}</li>
             {currentUser && currentUser.isAdmin?(<>
             <li>
-             <button style={{color:theme==="light"?"black":"white",fontSize:"18px",fontWeight:"normal"}} className='btn' onClick={() => dispatch(logoutUser())}>Logout</button>
+             <button style={{color:theme==="light"?"black":"white",fontSize:"15px",fontWeight:"normal"}} className='btn' onClick={() => dispatch(logoutUser())}>Logout</button>
              </li>
             </>):(<>
            <li>
@@ -70,7 +70,7 @@ const dis=()=>{
             </li>
             <li>
 
-            <button style={{color:theme==="light"?"black":"white",fontSize:"18px",fontWeight:"normal",paddingTop:"8px"}} className='btn hi' onClick={() => dispatch(logoutUser())}>Logout</button>
+            <button style={{color:theme==="light"?"black":"white",fontSize:"15px",fontWeight:"normal",paddingTop:"8px"}} className='btn ' onClick={() => dispatch(logoutUser())}>Logout</button>
             </li>
            </>) }
            </>
