@@ -25,18 +25,18 @@ const AllPizza = () => {
     dispatch(deletePizza(id));
   };
   return (
-    <div className={`ad t ${theme=="light"?"l-admin":"d-admin"}`}>
+    <div className={`ad t ${theme=="light"?"l-admin":"d-admin"}`} >
       <h2 style={{textAlign:"center"}}>Pizza List</h2>
-      <div className='tb'>
+      <div className='tb' >
         {loading && <Loading />}
         {!loading && !error &&
         <table className={`table1 table-striped border hover ${theme=="light"? "table-dark":"table-light" } `}  >
         <thead>
           <tr style={{color:theme=="light"?"black":"white" }}> 
-            <th  scope="col" >S/n</th>
+            <th  scope="col" className='sn' >S/n</th>
             <th scope="col">Pizza Name</th>
-            <th scope="col">Prices</th>
-            <th scope="col" >Category</th>
+            <th scope="col" className='pric'>Prices</th>
+            <th scope="col" className='cat' >Category</th>
             <th scope="col">Action</th>
           </tr>
         </thead>

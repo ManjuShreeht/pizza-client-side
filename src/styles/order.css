@@ -1,4 +1,20 @@
-
+.div1{
+   width:"100%";
+  
+ 
+   max-height: max-content ;
+   padding-bottom: 100px;
+   min-height: 100vh;
+}
+.rr{
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+ 
+}
+.mdd{
+    width: 100%;
+}
 .flex-container{
     display: flex !important;
     }
@@ -8,4 +24,30 @@
         padding: 5px 10px;
         color: white;
         border-radius: 5px;
+    }
+
+    @media only screen and (max-width:889px){
+        .div1{
+            width: 100%;
+       
+            margin-left: 0px;
+        }
+        .flex-container{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+           
+
+           
+            width: 100%;
+            }
+            
+            h5{
+                width: 100%;
+                font-size: 16px;
+            }
+            .w-50{
+                width: 100% !important;
+            }
     }

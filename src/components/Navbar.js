@@ -42,40 +42,54 @@ const dis=()=>{
   return (
     <div className={` nav ${theme==="light"?"light-nav":"darknav"}`}>
     <div className="nav1" >
+    <div className='innav1 '>
       {clicked ? <AiFillCloseCircle className='icon' onClick={dis} />: 
       <BiMenu className="icon" onClick={dis}/>}
-      
-            <img src='https://png.pngtree.com/png-vector/20220929/ourmid/pngtree-word-pizza-made-from-pizza-slices-png-image_6222066.png' alt="logo" className='logo' />
-        <div className={`innav ${clicked?"active":" "} `} id='none'>
-            <Link to='/' >Home</Link>
-            <Link to='/contact'>Contact Us</Link>
-            <Link to='/about'>About Us</Link>
-            <Link to='/policy'>Terms And Polices</Link>
-        </div>
-        <div className='innav const'>
-            { currentUser?(<>
-            <Link to='#'>{currentUser.username}</Link>
-            {currentUser && currentUser.isAdmin?(<>
-              <button style={{color:theme==="light"?"black":"white"}} className='btn' onClick={() => dispatch(logoutUser())}>Logout</button>
+            <div className='aaa'>
+
            
+            <img src='https://png.pngtree.com/png-vector/20220929/ourmid/pngtree-word-pizza-made-from-pizza-slices-png-image_6222066.png' alt="logo" className='logo' />
+            </div>
+        </div>
+        <ul className={`innav none ${clicked?"active":"none"} `} >
+           <li> <Link to='/' onClick={()=>setClicked(false)}  >Home</Link></li>
+           <li> <Link to='/contact' onClick={()=>setClicked(false)} >Contact Us</Link></li>
+           <li><Link to='/about' onClick={()=>setClicked(false)} >About Us</Link></li>
+           <li><Link to='/policy' onClick={()=>setClicked(false)} >Terms And Polices</Link></li>
+        </ul>
+        <ul className='innav const'>
+            { currentUser?(<>
+            <li >{currentUser.username}</li>
+            {currentUser && currentUser.isAdmin?(<>
+            <li>
+             <button style={{color:theme==="light"?"black":"white",fontSize:"18px",fontWeight:"normal"}} className='btn' onClick={() => dispatch(logoutUser())}>Logout</button>
+             </li>
             </>):(<>
-            <Link to='/order'>Orders</Link>
-            <button style={{color:theme==="light"?"black":"white"}} className='btn' onClick={() => dispatch(logoutUser())}>Logout</button>
+           <li>
+            <Link to='/order' style={{color:theme==="light"?"black":"white"}} >Orders</Link>
+            </li>
+            <li>
+
+            <button style={{color:theme==="light"?"black":"white",fontSize:"18px",fontWeight:"normal",paddingTop:"8px"}} className='btn hi' onClick={() => dispatch(logoutUser())}>Logout</button>
+            </li>
            </>) }
            </>
-           ):(
-            <Link to='/login'>Login</Link>
+           ):(<>
+            <li> <Link to='/login' style={{color:theme==="light"?"black":"white",paddingRight:"10px"}} >Hi</Link></li>
+            <li> <Link to='/register' style={{color:theme==="light"?"black":"white",paddingRight:"10px"}} >Register</Link></li>
+            <li> <Link to='/login' style={{color:theme==="light"?"black":"white",paddingRight:"15px"}} >Login</Link></li>
+           </>
             )
              }
              {currentUser && currentUser.isAdmin?(""):(
-            <Link to='/cart'><AiOutlineShoppingCart style={{width:"30px",height:"40px"}}/><span>{cart?cart?.length:"0"}</span>
-            </Link>)}
+           <li> <Link to='/cart'><AiOutlineShoppingCart style={{width:"30px",height:"40px",color:theme==="light"?"black":"white"}} /><span style={{color:theme==="light"?"black":"white"}}>{cart?cart?.length:"0"}</span>
+            </Link> </li>)}
           <div className="form-check form-switch">
   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={changetheme} />
   <label className="form-check-label" htmlFor="flexSwitchCheckDefault"></label>
 </div>
 
-        </div>
+        </ul>
         
     </div>
     </div>

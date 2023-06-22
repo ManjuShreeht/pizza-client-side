@@ -1,7 +1,8 @@
 .light{
     width:100%;
-    height: max-content;
-    padding-bottom: 20px;
+    max-height: max-content;
+    padding-bottom: 100px;
+    min-height: 100vh;
   
    
 }
@@ -107,6 +108,9 @@
 }
 
 .dark{
+    max-height: max-content;
+    padding-bottom: 100px;
+    min-height: 100vh;
     background-color:black;
     padding-bottom: 20px;
 }
@@ -118,8 +122,8 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         padding: 50px 10px ;
-     
-        gap:1px;
+     margin-left: 30px;
+        gap:10px;
       
     }
     .filter input{

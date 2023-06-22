@@ -129,13 +129,13 @@ const Cart = () => {
         )}
       </div>
       {cart && cart.length == 0 && (
-        <div style={{ padding: "207px 450px" }}>
+        <div  className="em">
           <h1 style={{ color: theme == "light" ? "black" : "#fff" }}>
             Your Cart Is Empty{" "}
           </h1>
           <button
             className="btn2"
-            style={{ marginLeft: "80px" }}
+            style={{ marginLeft: "50px" }}
             onClick={() => navigate("/")}>
             Click Here To Add Pizza To Cart
           </button>

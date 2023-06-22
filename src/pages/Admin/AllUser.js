@@ -18,7 +18,7 @@ console.log(AllUser)
     },[])
   return (
     <div className={`ad  ${theme=="light"?"l-admin":"d-admin"}`}>
-      <h2 style={{textAlign:"center"}}>Pizza List</h2>
+      <h2 style={{textAlign:"center"}}>User List</h2>
       <div className='tb'>
         {loading && <Loading />}
         {!loading && !error &&

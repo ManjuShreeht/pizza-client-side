@@ -13,14 +13,14 @@ const AllOrders = () => {
         dispatch(getAllOrder())
     },[dispatch])
   return (
-    <div className={`ad  ${theme=="light"?"l-admin":"d-admin"}`}>
-    <h2 style={{textAlign:"center" ,paddingTop:"20px"}}>Orders List</h2>
-    <div className='tb' style={{paddingLeft:"150px"}}>
+    <div className={`ad  ${theme=="light"?"l-admin":"d-admin"}`} >
+    <h2 style={{textAlign:"center" }}>Orders List</h2>
+    <div className='tb'  >
       {loading && <Loading />}
       {!loading && !error &&
-        <table className={`table2 table-striped border hover ${theme=="light"?"table-dark":"table-light"}`}>
-            <thead>
-              <tr>
+        <table className={`table2 ttt table-striped border hover ${theme=="light"?"table-dark":"table-light"}`} >
+            <thead >
+              <tr >
                 {/* <th scope="col">S/n</th> */}
                 <th scope="col">User Id</th>
                 <th scope="col">Email</th>
@@ -33,7 +33,7 @@ const AllOrders = () => {
 
               </tr>
             </thead>
-            <tbody>
+            <tbody >
               {AllOrders &&
                 AllOrders.map((order,i) => (
                   <tr key={order._id}>
